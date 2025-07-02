@@ -1,0 +1,15 @@
+# Base image
+FROM node:18
+
+# Set working directory
+WORKDIR /app
+
+# Copy files
+COPY package.json .
+COPY app.js .
+
+# Expose port
+EXPOSE 80
+
+# Start the app
+CMD ["npm", "start"]
